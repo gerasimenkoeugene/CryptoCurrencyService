@@ -11,7 +11,6 @@ public class CryptoCurrency {
 
     @Id
     private String id;
-
     private String name;
     private String symbol;
     private String rank;
