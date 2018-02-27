@@ -7,7 +7,6 @@ import lombok.Data;
 public class CryptoCurrencyDTO {
 
     private String id;
-
     private String name;
     private String symbol;
     private String rank;
