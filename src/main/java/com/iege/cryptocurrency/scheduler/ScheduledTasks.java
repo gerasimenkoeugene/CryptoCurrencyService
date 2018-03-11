@@ -18,13 +18,13 @@ public class ScheduledTasks {
 
 
     @Autowired
-    CryptoCurrencyRepository cryptoCurrencyRepository;
+    private CryptoCurrencyRepository cryptoCurrencyRepository;
 
     @Autowired
-    CryptoCurrencyService cryptoCurrencyService;
+    private CryptoCurrencyService cryptoCurrencyService;
 
     @Autowired
-    Converter<CryptoCurrencyDTO, CryptoCurrency> converter;
+    private Converter<CryptoCurrencyDTO, CryptoCurrency> converter;
 
     @Scheduled(fixedRate = 300000)
     public void updateCryptoCurrencyRate() {
