@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CryptoCurrencyRepository extends MongoRepository<CryptoCurrency, String> {
 
-    public CryptoCurrency findById(String cryptoName);
-    public List<CryptoCurrency> findListByName(String cryptoName);
+    CryptoCurrency findById(String id);
+    List<CryptoCurrency> findListByName(String cryptoName);
 
 }

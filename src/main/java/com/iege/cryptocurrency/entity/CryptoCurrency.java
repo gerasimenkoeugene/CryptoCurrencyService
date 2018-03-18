@@ -1,12 +1,14 @@
 package com.iege.cryptocurrency.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @AllArgsConstructor
+@Data
 public class CryptoCurrency {
 
     @Id
