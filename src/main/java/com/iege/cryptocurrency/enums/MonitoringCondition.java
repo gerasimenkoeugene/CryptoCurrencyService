@@ -1,11 +1,16 @@
 package com.iege.cryptocurrency.enums;
 
 public enum MonitoringCondition {
-    MORE_THAN("more than"), LESS_THEN("less than");
+    MORE_THEN_USD("More then defined price value in USD"),
+    LESS_THEN_USD("Less then defined price value in USD");
 
-    String name;
+    String description;
 
-    MonitoringCondition(String name) {
-        this.name = name;
+    MonitoringCondition(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
