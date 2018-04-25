@@ -16,6 +16,7 @@ public class Monitoring {
     private String idUser;
     private String userEmail;
     private MonitoringCondition monitoringCondition;
-    private Integer conditionValue;
+    private Double conditionValue;
+    private Boolean active;
 
 }

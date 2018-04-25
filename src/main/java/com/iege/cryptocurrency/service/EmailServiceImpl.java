@@ -2,6 +2,7 @@ package com.iege.cryptocurrency.service;
 
 import com.iege.cryptocurrency.entity.Monitoring;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,8 @@ public class EmailServiceImpl implements EmailService {
 
     @Autowired
     private JavaMailSender emailSender;
+    @Value("${client.url}")
+    private String clientUrl;
 
     public void sendMonitoringResults(String to, String subject, List<Monitoring> monitorings) {
         MimeMessage message = emailSender.createMimeMessage();
@@ -33,7 +36,9 @@ public class EmailServiceImpl implements EmailService {
                         .append("(<b>")
                         .append(monitoring.getConditionValue()).append("</b>)")
                         .append(". Current price is <b>").append(monitoring.getCryptoCurrency().getPriceUSD())
-                        .append("</b><p>");
+                        .append("</b> - ")
+                        .append("<a href=" + clientUrl + "monitoring/deactivate/" + monitoring.getId() + ">turn off monitoring</a>")
+                        .append("<p>");
             }
             stringBuilder.append("</body></html>");
             helper.setText(stringBuilder.toString(), true);

@@ -36,6 +36,6 @@ public class MonitoringServiceImpl implements MonitoringService {
     public boolean isConditionTrue(Monitoring monitoring) {
         double price = Double.valueOf(monitoring.getCryptoCurrency().getPriceUSD());
         double conditionValue = monitoring.getConditionValue();
-        return  monitoring.getMonitoringCondition().equals(MonitoringCondition.LESS_THEN_USD) ? price < conditionValue : price > conditionValue;
+        return monitoring.getMonitoringCondition().equals(MonitoringCondition.LESS_THEN_USD) ? price < conditionValue : price > conditionValue && monitoring.getActive();
     }
 }
