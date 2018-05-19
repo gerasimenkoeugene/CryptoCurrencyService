@@ -1,6 +1,7 @@
-package com.iege.cryptocurrency.service;
+package com.iege.cryptocurrency.service.impl;
 
 import com.iege.cryptocurrency.entity.Monitoring;
+import com.iege.cryptocurrency.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;

@@ -1,4 +1,4 @@
-package com.iege.cryptocurrency.service;
+package com.iege.cryptocurrency.service.impl;
 
 import com.iege.cryptocurrency.entity.SecUserDetails;
 import com.iege.cryptocurrency.entity.User;

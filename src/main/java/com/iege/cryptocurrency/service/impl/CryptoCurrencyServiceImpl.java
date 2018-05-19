@@ -1,8 +1,8 @@
-package com.iege.cryptocurrency.service;
+package com.iege.cryptocurrency.service.impl;
 
 import com.iege.cryptocurrency.dto.CryptoCurrencyDTO;
+import com.iege.cryptocurrency.service.CryptoCurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -22,6 +22,6 @@ public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
 
     @Override
     public CryptoCurrencyDTO getById(String id) {
-        return restTemplate.getForEntity("https://api.coinmarketcap.com/v1/ticker/" + id, CryptoCurrencyDTO.class).getBody();
+        return Arrays.stream(restTemplate.getForEntity("https://api.coinmarketcap.com/v1/ticker/" + id, CryptoCurrencyDTO[].class).getBody()).findFirst().get();
     }
 }

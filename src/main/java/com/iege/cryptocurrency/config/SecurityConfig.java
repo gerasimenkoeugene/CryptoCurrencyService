@@ -1,6 +1,6 @@
 package com.iege.cryptocurrency.config;
 
-import com.iege.cryptocurrency.service.SecUserDetailsService;
+import com.iege.cryptocurrency.service.impl.SecUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

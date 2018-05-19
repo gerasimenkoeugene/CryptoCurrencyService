@@ -1,10 +1,9 @@
-package com.iege.cryptocurrency.service;
+package com.iege.cryptocurrency.service.impl;
 
-import com.iege.cryptocurrency.entity.CryptoCurrency;
 import com.iege.cryptocurrency.entity.Monitoring;
 import com.iege.cryptocurrency.enums.MonitoringCondition;
-import com.iege.cryptocurrency.repository.CryptoCurrencyRepository;
 import com.iege.cryptocurrency.repository.MonitoringRepository;
+import com.iege.cryptocurrency.service.MonitoringService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
